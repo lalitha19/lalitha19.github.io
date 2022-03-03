@@ -17,7 +17,7 @@ recipes:Recipe[]=[
   ngOnInit(): void {
   }
   onRecipeSelected(recipe:Recipe){
-;this.recipeWasSelected.emit(recipe)
+this.recipeWasSelected.emit(recipe);
   }
 }
 function Ouput() {
