@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 @Component({
   selector: 'app-recipes-list',
   templateUrl: './recipes-list.component.html',
@@ -8,17 +9,14 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipesListComponent implements OnInit {
   
-@Output() recipeWasSelected=new EventEmitter<Recipe>();
-recipes:Recipe[]=[
-  new Recipe('Test Recipe','recipe description','https://static01.nyt.com/images/2021/06/01/dining/11lightveg-roundup-8/11lightveg-roundup-8-articleLarge-v2.jpg')
-];
-  constructor() { }
 
-  ngOnInit(): void {
+recipes:Recipe[];
+  constructor(private recipeService:RecipeService) { }
+
+  ngOnInit() {
+this.recipes=this.recipeService.getRecipes();
   }
-  onRecipeSelected(recipe:Recipe){
-this.recipeWasSelected.emit(recipe);
-  }
+ 
 }
 function Ouput() {
   throw new Error('Function not implemented.');
