@@ -1,24 +1,32 @@
-<div class="navbar navbar-default">
-    <div class="container-fluid">
-<div class="navbar-header">
+<div class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
     <a href="#" class="navbar-brand">Recipe Book</a>
-</div>
-<div class="navbar-collapse">
-    <ul class="nav navbar-nav">
-        <li><a routerLink="/recipes">Recipes</a></li>
-        <li><a routerLink="/shopping-list">Shopping List</a></li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right">
-<li class="dropdown" > 
-    <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"
-    aria-expanded="true" role="button">Manage</a>
-    <ul class="dropdown-menu appDropdown">
-        <li><a class="dropdown-item"  href="#">Save Data</a></li>
-        <li><a class="dropdown-item"  href="#">Get Data</a></li>
-    </ul>
-</li>
 
-    </ul>
-</div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="nav-item"><a class="nav-link"  routerLinkActive="active" routerLink="/recipes">Recipes</a></li>
+        <li class="nav-item">
+          <a routerLinkActive="active" class="nav-link"  routerLink="/shopping-list"
+            >Shopping List</a
+          >
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+          <a
+            href="#"
+            class="nav-link dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="true"
+            role="button"
+            >Manage</a
+          >
+          <ul class="dropdown-menu appDropdown">
+            <li><a class="dropdown-item" href="#">Save Data</a></li>
+            <li><a class="dropdown-item" href="#">Get Data</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
